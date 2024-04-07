@@ -44,6 +44,10 @@
     .list_location {
         margin-left: 10px !important;
     }
+
+    .icon_giohang {
+        margin-right: -15px;
+    }
 }
 
 
@@ -118,6 +122,10 @@
 
     .minicart {
         width: 100% !important;
+    }
+
+    .icon_giohang {
+        margin-right: 0px !important;
     }
 }
 

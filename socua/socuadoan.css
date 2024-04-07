@@ -1,0 +1,510 @@
+@media (max-width: 1200px) {
+
+    /* .pic_maumoi img {
+        width: 230px;
+    } */
+}
+
+@media (min-width: 993px) {
+
+    .banner_unset {
+        max-width: unset !important;
+    }
+
+    .row_banner {
+        margin: 0px;
+    }
+}
+
+@media (max-width: 992px) {
+    .phone {
+        display: none;
+    }
+
+    .user_icon {
+        display: none !important;
+    }
+
+    .header_mid {
+        justify-content: center;
+    }
+
+    .header_right {
+        justify-content: end;
+    }
+
+    /* .pic_maumoi img {
+        width: 170px;
+    } */
+}
+
+@media (max-width: 768px) {
+    .header_left {
+        order: 1;
+    }
+
+    .header_mid {
+        order: 4;
+    }
+
+    .nut {
+        order: 3;
+        display: block !important;
+        margin-top: 13px;
+        padding-left: 0px;
+        cursor: pointer;
+
+    }
+
+    .header_right {
+        order: 2;
+    }
+
+    .header_right {
+        justify-content: end;
+    }
+
+    .header {
+        margin-bottom: 50px;
+
+    }
+
+    .search_box {
+        padding: 0px 0px 0px 20px;
+        width: 100%;
+    }
+
+    .menu {
+        margin: 0px;
+    }
+
+    .navigation {
+        background-color: rgba(225, 225, 225, 0.2) !important;
+        backdrop-filter: blur(50px);
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        display: none;
+        width: 40%;
+        height: 100vh;
+        border-top-right-radius: 50px 50px;
+        left: -50%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+
+    .danhmuc {
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: 40px !important;
+    }
+
+    .li_danhmuc {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .li_danhmuc:hover {
+        background-color: blue;
+        border-radius: 15px;
+
+    }
+
+    .list_danhmuc {
+        padding: 15px 25px !important;
+        display: block;
+        width: 100%;
+    }
+
+    /* scroll */
+    .row_maumoi,
+    .row_sale {
+        display: grid;
+        grid-template-columns: unset;
+        grid-auto-flow: column;
+        grid-auto-columns: 32%;
+        overflow: x;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        scrollbar-width: none;
+    }
+
+    .row_maumoi::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0px 5px !important;
+    }
+
+    .header_mid {
+        padding-right: 10px !important;
+    }
+
+    .fa-bars {
+        margin-left: 30px;
+    }
+
+    .hide_maumoi {
+        display: none;
+    }
+}
+
+
+/* HEADER */
+
+.container-fluid {
+    padding: 0px;
+}
+
+.container {
+    padding: 0px;
+}
+
+.header {
+    height: 80px;
+    padding-top: 10px;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+}
+
+.header_left {
+    display: flex;
+    align-items: center;
+
+}
+
+.header_mid {
+    padding: 0px;
+    display: flex;
+    padding-top: 10px;
+}
+
+.header_right {
+    padding: 0px;
+    display: flex;
+    justify-content: end;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.khoangtrang {
+    margin-top: 20px;
+}
+
+.nut {
+    display: none;
+}
+
+.search_box {
+    margin: 0px;
+    height: 40px;
+    /* background-color: white; */
+}
+
+.searchinput {
+    position: relative;
+    border-radius: 20px;
+    padding: 5px 20px;
+    width: 100%;
+    height: 40px;
+}
+
+.btn_search {
+    position: absolute;
+    margin-left: -38px;
+    background: none;
+    padding: 0px;
+    height: 38px;
+    padding: 10px 6px;
+    border-radius: 50%;
+    border: none;
+}
+
+.phone {
+    height: 38px;
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.phone_icon {
+    padding-top: 5px;
+    float: left;
+    background: white;
+    border: none;
+}
+
+.phone_hotline {
+    float: left;
+    line-height: 20px;
+    margin-left: 5px;
+    margin-top: -8px;
+
+}
+
+.phone_hotline a {
+    color: red;
+    text-decoration: none;
+}
+
+.user_icon,
+.like_icon,
+.cart_icon {
+    height: 60px;
+    display: inline-flex;
+    flex-flow: column;
+    align-items: center;
+    background: none;
+    border: none;
+    margin-top: -5px;
+}
+
+.user_icon a,
+.like_icon a,
+.cart_icon a {
+    text-decoration: none;
+    color: black;
+    width: 78px;
+}
+
+.user_icon:hover,
+.like_icon:hover,
+.cart_icon:hover,
+.user_icon a:hover,
+.like_icon a:hover,
+.cart_icon a:hover {
+    color: orange;
+}
+
+/* THANH NAV */
+
+.menu {
+    height: 50px;
+}
+
+.danhmuc {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.list_danhmuc {
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.list_danhmuc:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+#close {
+    /* display: none; */
+    font-size: 40px;
+    top: -5px;
+    right: -40px;
+    position: absolute;
+    border: bold;
+    cursor: pointer;
+}
+
+
+#over_layout {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    cursor: pointer;
+}
+
+
+.menu_list_danhmuc {
+    color: #212529;
+    text-decoration: none;
+}
+
+.navigation {
+    background-color: #f1f1f1;
+}
+
+.banner_w {
+    padding: 0px;
+    height: auto;
+}
+
+
+/* DICH VU */
+
+.dichvu {
+    margin-top: 10px;
+}
+
+.row_dichvu {
+    margin: 0px;
+}
+
+.freeship,
+.shipcod,
+.vip,
+.baohanh {
+    display: flex;
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.freeship_right,
+.shipcod_right,
+.vip_right,
+.baohanh_right {
+    margin-left: 10px;
+}
+
+.freeship_td,
+.cod_td,
+.vip_td,
+.baohanh_td {
+    font-weight: bold;
+}
+
+.freeship_text,
+.cod_text,
+.vip_text,
+.baohanh_text {
+    font-size: 14px;
+    color: gray;
+}
+
+
+/* SAN PHAM */
+.muc {
+    font-size: 30px;
+    font-family: Noto Serif;
+    cursor: pointer;
+    margin-left: 0px;
+}
+
+.muc:hover {
+    color: orange
+}
+
+.pic_maumoi {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ten_sp {
+    font-family: Libre Franklin;
+    width: 230px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.gia_sp {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+.see {
+    position: relative;
+}
+
+.see_more {
+    position: absolute;
+    background-color: #212529;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 30px;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.see_more a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.fa-arrow-right {
+    color: white;
+}
+
+
+.see_more:hover a {
+    color: orange;
+}
+
+.see_more:hover i {
+    color: orange;
+}
+
+
+.style_maumoi {
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.picture_large,
+.picture_mall_top_left,
+.picture_mall_top_right,
+.picture_mall_bot {
+    width: 100%;
+}
+
+.small_top {
+    padding: 0px 0px 20px 0px;
+}
+
+.picture_large {
+    height: 100%;
+}
+
+.maumoi_hover {
+    position: relative;
+    width: min-content;
+}
+
+.maumoi_hover img {
+    transition: all 1s;
+}
+
+.maumoi_hover .img-change {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.maumoi_hover:hover .img-change {
+    opacity: 0;
+}
+
+#change_thongbao {
+    color: #f1f1f1;
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

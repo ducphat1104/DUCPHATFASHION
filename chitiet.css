@@ -1,0 +1,390 @@
+/* @media (max-width: 1400px) {
+
+    .pic_small {
+        width: 70px;
+    }
+
+    .small_pic_chitiet {
+        margin-bottom: 20px;
+    }
+} */
+
+@media (max-width: 1200px) {
+
+    .pic_small {
+        width: 65.9px;
+    }
+
+    .small_pic_chitiet {
+        margin-bottom: 10px !important;
+    }
+
+    .pic_big {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .pic_small {
+        width: 68px;
+    }
+
+    .pic_small_chitiet {
+        order: 2;
+    }
+
+    .pic_big_chitiet {
+        order: 1;
+        margin-bottom: 5px;
+    }
+
+    .icon_heart_chitiet {
+        padding-right: 0px;
+    }
+
+    /* .small_pic_chitiet {
+        margin-bottom: 10px !important;
+    } */
+    .right_ship_follow,
+    .right_hotline_hotro {
+        padding-left: 10px;
+    }
+
+    .mota_ct p {
+        padding: 0 15% !important;
+    }
+
+    .pic_mota {
+        padding: 0 15% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .chitiet {
+        padding-top: 20px;
+    }
+
+    .pic_small_chitiet {
+        display: flex;
+        gap: 5px;
+        padding-right: 5px;
+    }
+
+    .pic_small {
+        width: 100%;
+    }
+
+    .pic_big_chitiet {
+        padding-right: 5px;
+    }
+
+    .icon_heart_chitiet {
+        display: none !important;
+    }
+
+    .add_giohang {
+        margin-left: -10px;
+    }
+
+    .name_chitiet {
+        line-height: 35px;
+    }
+
+    .info_product {
+        padding-left: 10px !important;
+    }
+
+    .mota_ct p {
+        padding: 0 10% !important;
+    }
+
+    .pic_mota {
+        padding: 0 10% !important;
+    }
+
+
+
+}
+
+.chitiet {
+    margin-top: 20px;
+}
+
+.small_pic_chitiet {
+    margin-bottom: 15px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    z-index: 10;
+}
+
+
+/* .small_pic_chitiet span::before {
+    position: absolute;
+    content: "";
+    border: solid;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    bottom: auto;
+    z-index: 1;
+}
+
+.small_pic_chitiet span:hover::before {
+    transition: all 0.3s ease-in-out;
+    top: 0px;
+} */
+.name_chitiet {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.price_chitiet {
+    font-size: 22px;
+    color: #c80204;
+
+}
+
+.color_chitiet {
+    display: flex;
+}
+
+.nau {
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+    border: 2px solid #f6f6f6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nau_dam {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(66, 50, 50);
+    border: 2px solid #f6f6f6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.be {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(217, 182, 140);
+    border: 2px solid #f6f6f6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.size {
+    display: flex;
+}
+
+.sizeM,
+.sizeL,
+.sizeXL {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-weight: 400;
+    border: 1px solid;
+    /* padding: 10px 10px; */
+    margin-right: 10px;
+}
+
+.soluong {
+    height: 50px;
+}
+
+.giam_sl,
+.tang_sl,
+#input_sl {
+    height: 50px;
+    width: 27%;
+}
+
+.add_giohang {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tim_chtiet {
+    height: 50px;
+    font-size: 55px;
+    cursor: pointer;
+}
+
+.icon_heart_chitiet {
+    display: flex;
+    justify-content: end;
+}
+
+.sizeM:hover,
+.sizeL:hover,
+.sizeXL:hover {
+    background-color: #333;
+    color: white;
+    border: white;
+    cursor: pointer;
+}
+
+.info_product {
+    line-height: 40px;
+    padding-left: 40px;
+}
+
+.chinhsach_ct {
+    margin-top: 20px;
+    background-color: #f7f7f7;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 10px 0px 0px 10px;
+}
+
+.right_ship_fast,
+.right_ship_free,
+.right_ship_follow,
+.right_change_product,
+.right_thanhtoan,
+.right_hotline_hotro {
+    font-size: 14px;
+    margin-left: 15px;
+
+}
+
+.right_change_product,
+.right_thanhtoan {
+    margin-left: 22px;
+}
+
+.ship_fast,
+.ship_free_ct,
+.ship_follow,
+.change_product,
+.thanhtoan,
+.hotline_hotro {
+    display: flex;
+    line-height: 20px;
+    padding-right: 0px
+}
+
+.ship_fast p,
+.ship_free_ct p,
+.ship_follow p p,
+.change_product p,
+.thanhtoan p,
+.hotline_hotro p {
+    font-weight: 400;
+    font-size: 13px;
+    color: gray;
+}
+
+.text_ship_fast,
+.text_ship_free,
+.text_ship_follow,
+.text_change_product,
+.text_thanhtoan,
+.text_hotline_hotro {
+    font-weight: 500;
+}
+
+.dacdiem_vuong {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #c80204;
+}
+
+.dacdiem {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+tbody {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 12px;
+}
+
+tr {
+    width: 50%;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+th {
+    width: 50%;
+}
+
+.text_mota {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.mota_ct p {
+    display: flex;
+    justify-content: center;
+    padding: 0px 25%;
+}
+
+.pic_mota {
+    width: 100%;
+    padding: 0 25%;
+}
+
+.img_mota {
+    display: none;
+    margin-bottom: 30px;
+}
+
+.nut_mota {
+    display: flex;
+    padding: 0 25%;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.nut_thugon {
+    margin-right: 50px;
+}
+
+.nut_xemthem {
+    margin-left: 50px;
+}
+
+.nut_thugon,
+.nut_xemthem {
+    background-color: #333;
+    color: white;
+    padding: 10px 10px;
+    /* margin-left: 50px; */
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nut_thugon:hover,
+.nut_xemthem:hover {
+    background-color: #f7f7f7;
+    border: 1px solid #333;
+    color: #333;
+    font-weight: bolf;
+}

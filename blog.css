@@ -1,0 +1,46 @@
+@media (max-width: 768px) {
+
+    .blog {
+        padding-top: 15px;
+        margin-left: 12px !important;
+        width: 97%;
+    }
+
+    .tin_tuc_tieude {
+        padding-top: 25px;
+    }
+}
+
+
+
+.tin_tuc_tieude {
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.day {
+    font-size: 13px;
+    color: gray;
+}
+
+.see_blog {
+    text-decoration: none;
+    color: black;
+}
+
+.chude_blog {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.blog {
+    margin: auto;
+}
+
+.chude_blog a {
+    text-decoration: none;
+    color: black;
+}

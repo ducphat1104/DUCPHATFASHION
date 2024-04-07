@@ -1,0 +1,68 @@
+@media (max-width: 768px) {
+    .pic_gt_left {
+        order: 1;
+    }
+
+    .left_gt {
+        order: 2;
+    }
+
+    .pic_gt_right {
+        order: 3;
+    }
+
+    .right_gt {
+        order: 4;
+    }
+
+    .thoitrangunisex {
+        margin-top: 10px;
+    }
+
+    .xem_san_pham {
+        margin-bottom: 20px;
+    }
+
+}
+
+.gioithieu {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.line_gioithieu {
+    padding-top: 20px;
+    border-bottom: 1px solid;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.left_gt,
+.right_gt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.thoitrangunisex {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+}
+
+.xem_san_pham a {
+    border: 1px solid;
+    padding: 10px 30px;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.xem_san_pham a:hover {
+    background-color: #333;
+    color: white;
+}

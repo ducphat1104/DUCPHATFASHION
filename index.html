@@ -1,0 +1,803 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./doan.css">
+    <link rel="stylesheet" href="./production.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <!-- //jscdn// -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Kenta shop</title>
+
+</head>
+<style>
+    .product {
+        margin: 0px;
+        margin-top: 30px;
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 20px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-stop: always;
+        scrollbar-width: none;
+    }
+
+    .product::-webkit-scrollbar {
+        display: none;
+    }
+
+    .list_product {
+        scroll-snap-align: start;
+        width: auto;
+    }
+
+
+    /* SILDER */
+
+
+
+    /* Slideshow container */
+    .slideshow-container {
+        position: relative;
+        margin: auto;
+        padding: 0px;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        text-decoration: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        margin-top: 30px;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade:not(.show) {
+        opacity: 1 !important;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+        .prev,
+        .next,
+        .text {
+            font-size: 11px
+        }
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row row_header">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-6 header_left">
+                    <a href="#"><img class="logo" src="./images/oke3.png"></a>
+                </div>
+                <div id="open" class="nut col-sm-1 col-2">
+                    <i class="fa-solid fa-bars nut_tron"></i>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-10  header_mid">
+                    <form class="col-xl-8 col-lg-8 search_box" action="">
+                        <input type="text" class="searchinput" placeholder="Tìm kiếm sản phẩm">
+                        <button class="btn_search">
+                            <div><span><i class="fas fa-search"></i></span></div>
+                        </button>
+                    </form>
+                    <div class="col-xl-4 col-lg-4 phone">
+                        <button class="phone_icon">
+                            <div><span><i class="fa-solid fa-phone" style="font-size: 20px;"></i></i></span></div>
+                        </button>
+                        <div class=" phone_hotline">
+                            <h6 style="font-weight: bold;width: 105px;margin-top: 5px;margin-bottom: 0px;">
+                                Tư vấn hỗ trợ
+                            </h6>
+                            <a href="#">19008179</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-6  header_right">
+                    <button class="user_icon">
+                        <span><i class='bx bx-user' style="font-size:25px;height: 25px;"></i></span>
+                        <a href="#">Đăng nhập</a>
+                    </button>
+                    <button class="like_icon">
+                        <span><i class='bx bx-heart' style="font-size:25px;height: 25px;"></i></i></span>
+                        <a href="#">Yêu thích</a>
+                    </button>
+                    <button class="cart_icon">
+                        <span><i class='bx bx-cart-alt' style="font-size:25px;height: 25px;"></i></span>
+                        <a href="#">Giỏ hàng</a>
+                    </button>
+                </div>
+                <div class="minicart">
+                    <div class="head_cart">
+                        <div class="left_head">
+                            <div class="icon_minicart">
+                                <i class='bx bx-cart'></i>
+                            </div>
+                            <div class="tieude_minicart">
+                                Giỏ hàng
+                            </div>
+                        </div>
+                        <div class="iconback_minicart">
+                            <i class='bx bx-right-arrow-alt back_minicart'></i>
+                        </div>
+                    </div>
+                    <div class="product_minicart">
+                        <div class="row descrip_product">
+                            <div class="col-lg-3 col-lg-3 col-md-3 col-sm-3 col-3 descripp_product_left">
+                                <div class="pic_minicart">
+                                    <img class="pic_minicart_descript" src="./images/maumoi1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 descripp_product_right">
+                                <div class="name_mincart">
+                                    Váy 2 dây bổ mảnh dáng xòe
+                                </div>
+                                <div class="color_mincart">
+                                    Màu sắc : Be
+                                </div>
+                                <div class="size_minicart">
+                                    Size: M
+                                </div>
+                                <div class="so_luong">
+                                    Số lượng : <span class="change_soluong">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line_minicart"></div>
+                        <div class="row">
+                            <div class="total_minicart">
+                                Tổng đơn hàng :500.000đ
+                            </div>
+                        </div>
+                        <div class="bot_minicart">
+                            <div class="row see_cart">
+                                <div class="button_see_minicart">
+                                    Xem giỏ hàng
+                                </div>
+                            </div>
+                            <div class="row set_cart">
+                                <div class="button_set_minicart">
+                                    Đặt hàng
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="over_layout"></div>
+    <div class="navigation">
+        <!-- nút close -->
+        <!-- <div id="close">
+            <i class='bx bx-x'></i>
+        </div> -->
+        <div class="container">
+            <div class="row menu">
+                <ul class="danhmuc">
+                    <li class="li_danhmuc"><a href="./ducphatfashion.html" class="list_danhmuc">Trang chủ</a></li>
+                    <li class="li_danhmuc"><a href="./product.html" class="list_danhmuc">Sản phẩm</a></li>
+                    <li class="li_danhmuc"><a href="./xuhuong.html" class="list_danhmuc">Xu hướng</a></li>
+                    <li class="li_danhmuc"><a href="./gioithieu.html" class="list_danhmuc">Giới thiệu</a></li>
+                    <li class="li_danhmuc"><a href="./blog.html" class="list_danhmuc">Tin tức</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="container banner_unset">
+            <div class="row row_banner">
+                <!-- <img class="banner_w" src="./images/banner.jpg" alt="banner" width="100%" height="350px"> -->
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 2</div>
+                        <img src="./images/banner.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 2</div>
+                        <img src="./images/banner1.jpg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <!-- <span class="dot" onclick="currentSlide(3)"></span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dichvu">
+        <div class="container">
+            <div class="row row_dichvu">
+                <div class="col-xl-3 col-lg-6 col-md-6 freeship">
+                    <div class="freeship_left">
+                        <img class="icon" src="./images/shipfree.png" alt="">
+                    </div>
+                    <div class="freeship_right">
+                        <div class="freeship_td">Miễn phí giao hàng</div>
+                        <div class="freeship_text">Miễn phí giao cho đơn từ 500K</div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 shipcod">
+                    <div class="shipcod_left">
+                        <img class="icon" src="./images/shipcod.png" alt="">
+                    </div>
+                    <div class="shipcod_right">
+                        <div class="cod_td">Thanh toán COD</div>
+                        <div class="cod_text">Thanh toán khi nhận hàng (COD)</div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 vip">
+                    <div class="vip_left">
+                        <img class="icon" src="./images/vip.png" alt="">
+                    </div>
+                    <div class="vip_right">
+                        <div class="vip_td">Khách hàng thân thiết</div>
+                        <div class="vip_text">Ưu đãi dành cho khách hàng vip</div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 baohanh">
+                    <div class="baohanh_left">
+                        <img class="icon" src="./images/baohanh.png" alt="">
+                    </div>
+                    <div class="baohanh_right">
+                        <div class="baohanh_td">Hỗ trợ bảo hành</div>
+                        <div class="baohanh_text">Sữa , đổi tại cửa hàng toàn quốc</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mau_moi">
+        <div class="container">
+            <div class="row muc">
+                MẪU MỚI VỀ
+            </div>
+            <div class="product">
+                <div class="list_product" style="padding-left: 10px;">
+                    <div class="pic_product active_pic">
+                        <a href="./chitiet.html">
+                            <img class="style_product img-change" src="./images/maumoi.jpg" alt="">
+                            <img class="style_product" src="./images/maumoihv.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp"><a class="link_ten" href="#">Áo Khoác Nam Flannel Tay Dài Kẻ Caro</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">300.000đ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_product ">
+                    <div class="pic_product active_pic">
+                        <a href="./chitiet.html">
+                            <img class="style_product img-change" src="./images/maumoi1.jpg" alt="">
+                            <img class="style_product" src="./images/maumoi1hv.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp"><a class="link_ten" href="#">Áo Blazer Nữ Lửng Tay Ngắn Vải Tweed</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">400.000đ</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="list_product ">
+                    <div class="pic_product active_pic">
+                        <a href="./chitiet.html">
+                            <img class="style_product img-change" src="./images/maumoi2.jpg" alt="">
+                            <img class="style_product" src="./images/maumoi2hv.jpg" alt=""></a>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp"><a class="link_ten" href="#">Áo Sweater Nam Basic Cổ Tròn Nhãn</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">500.000đ</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="list_product ">
+                    <div class="pic_product active_pic">
+                        <a href="./chitiet.html">
+                            <img class="style_product img-change" src="./images/pr1hv.png" alt="">
+                            <img class="style_product" src="./images/pr1.png" alt=""></a>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp"><a class="link_ten" href="#">Áo Sweater Nam Basic Cổ Tròn Nhãn</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">500.000đ</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="list_product ">
+                    <div class="pic_product active_pic see">
+                        <img class="style_product img-change" src="./images/maumoi3.jpg" alt="">
+                        <img class="style_product" src="./images/maumoi3hv.jpg" alt="">
+                        <div class="see_more">
+                            <a href="./product.html">Xem tất cả<br> <i class="fa-solid fa-arrow-right"
+                                    style="font-size: 40px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp cb"><a class="link_ten" href="#">Áo Khoác Bomber Nam Nylon Chần Bông</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">600.000đ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="picture_info">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-ld-6 col-md-6 line_img_large_parent">
+                    <a class="line_img_large" href="#"><img class="picture_large" src="./images/b1.png" alt=""></a>
+                </div>
+                <div class="col-xl-6 col-ld-6 col-md-6">
+                    <div class="row small_top">
+                        <div class="col-xl-6 col-ld-6 col-md-6 col-6">
+                            <div class="image-container">
+                                <a href="#"><img class="picture_mall_top_left" src="./images/b2.jpg" alt=""></a>
+                                <a href="./product.html" class="buy">
+                                    <span>Nam</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-ld-6 col-md-6 col-6">
+                            <div class="image-container">
+                                <a href="./product.html"><img class="picture_mall_top_right" src="./images/b.jpg"
+                                        alt=""></a>
+                                <a href="./product.html" class="buy"><span>Nữ</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 line_img_small_parent">
+                            <a class="line_img_small" href="#"><img class="picture_mall_bot" src="./images/b10.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sale">
+        <div class="container">
+            <div class="row muc">
+                SALE ĐỒNG GIÁ
+            </div>
+            <div class="product">
+                <div class="list_product" style="padding-left: 10px;">
+                    <div class="pic_product active_pic">
+                        <a href="./chitiet.html">
+                            <img class="style_product img-change" src="./images/sale2.png" alt="">
+                            <img class="style_product" src="./images/sale1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp"><a class="link_ten" href="#">Áo Khoác Nam Flannel Tay Dài Kẻ Caro</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">300.000đ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_product">
+                    <div class="pic_product active_pic">
+                        <a href="./chitiet.html">
+                            <img class="style_product img-change" src="./images/sale4.png" alt="">
+                            <img class="style_product" src="./images/sale3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp"><a class="link_ten" href="#">Áo Blazer Nữ Lửng Tay Ngắn Vải Tweed</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">400.000đ</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="list_product">
+                    <div class="pic_product active_pic">
+                        <a href="./chitiet.html">
+                            <img class="style_product img-change" src="./images/sale7.png" alt="">
+                            <img class="style_product" src="./images/sale8.png" alt="">
+                        </a>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp"><a class="link_ten" href="#">Áo Sơ Mi Nam Tay Dài Form Oversize</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">500.000đ</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="list_product ">
+                    <div class="pic_product active_pic see">
+                        <img class="style_product img-change" src="./images/sale5.png" alt="">
+                        <img class="style_product" src="./images/sale6.png" alt="">
+                        <div class="see_more">
+                            <a href="./product.html">Xem tất cả<br> <i class="fa-solid fa-arrow-right"
+                                    style="font-size: 40px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp cb"><a class="link_ten" href="#">Áo Khoác Bomber Nam Nylon Chần Bông</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">600.000đ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thongbao">
+        <div class="container">
+            <div class="row">
+                <p id="change_thongbao">
+                    THÔNG BÁO : SIÊU SALE ĐẬM NHẤT THÁNG 4/4
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="blog">
+        <div class="container">
+            <div class="row muc">
+                Bài viết mới nhất
+            </div>
+            <div class="row tintuc">
+                <div class="col-xl-6 col-lg-6">
+                    <a href="./blog_1.html"><img class="pic_blog_large" src="./images/blog.jpg" width="100%" alt=""></a>
+                    <div class="over_text">
+                        <a class="tieude_tintuc" href="./blog_1.html">
+                            POLO HOLIDAY KINIT - Ý TƯỞNG CHO KÌ NGHỈ MỚI
+                        </a>
+                        <p class="noidung_blog">Polo Holiday Kinit, một sự kết hợp hài hòa giữa nét cổ điển và sự thoải
+                            mái mang phong cách
+                            hiện đại. Siêu phẩm được mong chờ nhất tháng 3 - Polo Holyday Knit dự đoán sẽ làm mưa làm
+                            gió tại DUCPHAT FASHION</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="row blog_small_top">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 unsetp_blog">
+                            <a href="./blog.html"><img class="pic_blog_small" src="./images/blog1.jpg" alt=""></a>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 over_text">
+                            <a class="tieude_tintuc" href="./blog.html">
+                                Bí Quyết Tạo Phong Cách Riêng Của Bạn Với Cửa Hàng Thời Trang Đẳng Cấp
+                            </a>
+                            <p class="noidung_blog">
+                                Chào mừng bạn đến với blog của chúng tôi! Tại đây, chúng tôi không chỉ cung cấp những bộ
+                                sưu tập thời trang đa dạng mà ...</p>
+                        </div>
+                    </div>
+                    <div class="row blog_small_top">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 unsetp_blog">
+                            <a href="./blog.html"> <img class="pic_blog_small" src="./images/mieu.jpg" alt=""></a>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 over_text">
+                            <a class="tieude_tintuc" href="./blog.html">
+                                TET COLLECTION 2024 - YEAR OF THE DRAGON
+                            </a>
+                            <p class="noidung_blog">
+                                Dịp Tết Giáp Thìn 2024 đang đến gần. Đây là thời điểm tuyệt vời để chúng ta cùng nhau
+                                tận hưởng không khí ấm áp ...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row row_footer">
+                <div class="col-xl-3 col-lg-3 footer_right">
+                    <div class="info_footer_right">
+                        <h6 class="tieude_footer">CÔNG TY TNHH DUCPHAT FASHION VIETNAM</h6>
+                    </div>
+                    <p class="mota">Mã Số Thuế: 0106486365</p>
+                    <p class="mota">Văn phòng: tầng 5 Tòa nhà IMC, 62 Trần Quang Khải - Phường Tân Định - Quận 1 - TP Hồ
+                        Chí Minh.
+                    </p>
+                    <h6 class="tieude_footer">THAM GIA BẢNG TIN CỦA CHÚNG TÔI</h6>
+                    <form action="" class="input__gmail">
+                        <input class="input_gmail" type="text" placeholder="Nhập gmail liên hệ">
+                        <!-- <i class='bx bxl-gmail icon_gmail'></i> -->
+                    </form>
+                </div>
+                <div class="col-xl-3 col-lg-3 footer_mid_left">
+                    <h6 class="tieude_footer">KẾT NỐI VỚI CHÚNG TÔI</h6>
+                    <div class="mxh_footer">
+                        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-tiktok'></i></a>
+                    </div>
+                    <div class="cty">
+                        <h6 class="tieude_footer">CÔNG TY <i class='bx bx-chevron-down'></i></h6>
+                    </div>
+                    <div class="drop_down_footer_cty">
+                        <a class="mota" href="#">Giới thiệu về DUCPHAT FASHION</a>
+                        <a class="mota" href="#">Tuyển dụng</a>
+                        <a class="mota" href="#">Tin thời trang</a>
+                        <a class="mota" href="#">Hợp tác nhượng quyền</a>
+                        <a class="mota" href="#">Liên hệ</a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 footer_mid_right">
+                    <h6 class="tieude_footer chinhsach">CHÍNH SÁCH KHÁCH HÀNG <i
+                            class='bx bx-chevron-down hide_icon_footer'></i></h6>
+                    <div class="drop_down_footer_chinhsach">
+                        <a class="mota" href="#">Chính sách khách hàng thân thiết</a>
+                        <a class="mota" href="#">Chính sách đổi trả</a>
+                        <a class="mota" href="#">Chính sách bảo mật</a>
+                        <a class="mota" href="#">Câu hỏi thường gặp</a>
+                        <a class="mota" href="#">Hướng dẫn mua hàng online</a>
+                    </div>
+                    <iframe class="hide_ggmap"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2099330693136!2d106.71921090804422!3d10.79522715880747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527c2f8f30911%3A0x36ac5073f8c91acd!2sT%C3%B2a%20nh%C3%A0%20The%20Landmark%2081!5e0!3m2!1svi!2s!4v1711734698264!5m2!1svi!2s"
+                        width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-xl-3 col-lg-3 footer_left">
+                    <h6 class="tieude_footer cuahang">THÔNG TIN CỬA HÀNG <i
+                            class='bx bx-chevron-down hide_icon_footer'></i></h6>
+                    <div class="drop_down_footer_cuahang">
+                        <h6 class="tieude_footer"><i class='bx bx-home-alt'></i> CỬA HÀNG THỨ 34</h6>
+                        <p class="mota">F15 tầng 1 AEON Mall Tân Phú, 30 Bờ Bao Tân Thắng, Phường Sơn Kỳ, TP Hồ Chí Minh
+                        </p>
+
+                        <h6 class="tieude_footer"><i class='bx bx-home-alt'></i> CỬA HÀNG THỨ 34</h6>
+                        <p class="mota">809 Giải Phóng, Phường Giáp Bát, Quận Hoàng Mai, TP Hà Nội</p>
+
+                        <h6 class="tieude_footer"><i class='bx bx-home-alt'></i> CỬA HÀNG THỨ 34</h6>
+                        <p class="mota">192 - 194 Hoa Lan, Phường 2, Quận Phú Nhuận, TP Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="toTop">
+        <i class='bx bx-upvote icon_toTop'></i>
+    </div>
+    <div class="phone_mobile">
+        <i class='bx bx-phone-call icon_phone_mobile'></i>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script>
+        // Sử dụng jQuery để thay đổi văn bản sau 2 giây
+        $(document).ready(function () {
+            // Mảng chứa các văn bản cần thay đổi
+            var texts = ["HOT : TUẦN LỄ SIÊU SALE GIẢM 50% CHO ĐƠN HÀNG TỪ 2TR", "THÔNG BÁO : ĐẶT HÀNG NGAY ĐỂ ĐƯỢC MIỄN PHÍ SHIP"];
+            // Biến đếm vị trí hiện tại trong mảng văn bản
+            var index = 0;
+            // Hàm thay đổi văn bản
+            function changeText() {
+                $("#change_thongbao").text(texts[index]);
+                // Tăng index, hoặc reset về 0 nếu đã đến cuối mảng
+                index = (index + 1) % texts.length;
+            }
+            // Thực hiện thay đổi văn bản mỗi 2 giây
+            setInterval(changeText, 4000); // 2 giây
+        });
+        //menu
+        $(document).ready(function () {
+            $("#open").click(function () {
+                $(".navigation").css('display', 'block');
+                $("#close").css('display', 'block');
+                $(".navigation").animate({ left: '0px' });
+                $("#over_layout").fadeIn(100);
+            });
+        });
+        $("#close").click(function () {
+            $(".navigation").animate({ left: '-50%' }, 1000);
+            $("#over_layout").fadeOut(500);
+        });
+        $("#over_layout").click(function () {
+            $(".navigation").animate({ left: '-50%' }, 1000);
+            $("#over_layout").fadeOut(500);
+        });
+        $(document).ready(function () {
+            $(".cart_icon").click(function () {
+                console.log("cc");
+                $(".minicart").css('display', 'block');
+                $(".minicart").animate({ right: '0px' });
+            });
+        });
+        $(".iconback_minicart").click(function () {
+            $(".minicart").animate({ right: '-100%' }, 1000);
+        });
+
+
+        // SLIDER//
+
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+
+        // tottop
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('#toTop').fadeIn();
+            } else {
+                $('#toTop').fadeOut();
+            }
+        });
+
+        $("#toTop").click(function () {
+            $("html, body").animate({ scrollTop: 0 }, 1000);
+        });
+
+        // footer
+        $(document).ready(function () {
+            $(".chinhsach").click(function () {
+                $(".drop_down_footer_chinhsach").toggle();
+            });
+            $(".cty").click(function () {
+                $(".drop_down_footer_cty").toggle();
+            });
+            $(".cuahang").click(function () {
+                $(".drop_down_footer_cuahang").toggle();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

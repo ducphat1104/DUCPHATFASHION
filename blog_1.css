@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+
+}
+
+.tieude_blog {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.pic_blog_1 {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}

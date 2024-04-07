@@ -1,0 +1,360 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./doan.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Kenta shop</title>
+
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row row_header">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-6 header_left">
+                    <a href="#"><img class="logo" src="./images/oke3.png"></a>
+                </div>
+                <div id="open" class="nut col-sm-1 col-2">
+                    <i class="fa-solid fa-bars" style="font-size: 35px;"></i>
+                    <!-- <img src="./images/togger_nav.png" alt=""> -->
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-10  header_mid">
+                    <form class="col-xl-8 col-lg-8 search_box" action="">
+                        <input type="text" class="searchinput" placeholder="Tìm kiếm sản phẩm">
+                        <button class="btn_search">
+                            <div><span><i class="fas fa-search"></i></span></div>
+                        </button>
+                    </form>
+                    <div class="col-xl-4 col-lg-4 phone">
+                        <button class="phone_icon">
+                            <div><span><i class="fa-solid fa-phone" style="font-size: 20px;"></i></i></span></div>
+                        </button>
+                        <div class=" phone_hotline">
+                            <h6 style="font-weight: bold;width: 105px;margin-top: 5px;margin-bottom: 0px;">
+                                Tư vấn hỗ trợ
+                            </h6>
+                            <a href="#">19008179</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-6  header_right">
+                    <button class="user_icon">
+                        <span><i class='bx bx-user' style="font-size:25px;height: 25px;"></i></span>
+                        <a href="#">Đăng nhập</a>
+                    </button>
+                    <button class="like_icon">
+                        <span><i class='bx bx-heart' style="font-size:25px;height: 25px;"></i></i></span>
+                        <a href="#">Yêu thích</a>
+                    </button>
+                    <button class="cart_icon">
+                        <span><i class='bx bx-cart-alt' style="font-size:25px;height: 25px;"></i></span>
+                        <a href="#">Giỏ hàng</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="over_layout"></div>
+    <div class="navigation">
+        <!-- nút close -->
+        <div for="nav_hidden1" id="close">
+            <i class='bx bx-x'></i>
+        </div>
+        <div class="container">
+            <div class="row menu">
+                <ul class="danhmuc">
+                    <li class="li_danhmuc"><a href="#" class="list_danhmuc">Trang chủ</a></li>
+                    <li class="li_danhmuc"><a href="#" class="list_danhmuc">Sản phẩm</a></li>
+                    <li class="li_danhmuc"><a href="#" class="list_danhmuc">Xu hướng</a></li>
+                    <li class="li_danhmuc"><a href="#" class="list_danhmuc">Giới thiệu</a></li>
+                    <li class="li_danhmuc"><a href="#" class="list_danhmuc">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="container banner_unset">
+            <div class="row row_banner">
+                <img class="banner_w" src="./images/banner5.png" alt="banner" width="100%" height="350px">
+            </div>
+        </div>
+    </div>
+    <div class="khoangtrang"></div>
+    <div class="dichvu">
+        <div class="container">
+            <div class="row row_dichvu">
+                <div class="col-xl-3 col-lg-6 col-md-6 freeship">
+                    <div class="freeship_left">
+                        <img class="icon" src="./images/shipfree.png" alt="">
+                    </div>
+                    <div class="freeship_right">
+                        <div class="freeship_td">Miễn phí giao hàng</div>
+                        <div class="freeship_text">Miễn phí giao cho đơn từ 500K</div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 shipcod">
+                    <div class="shipcod_left">
+                        <img class="icon" src="./images/shipcod.png" alt="">
+                    </div>
+                    <div class="shipcod_right">
+                        <div class="cod_td">Thanh toán COD</div>
+                        <div class="cod_text">Thanh toán khi nhận hàng (COD)</div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 vip">
+                    <div class="vip_left">
+                        <img class="icon" src="./images/vip.png" alt="">
+                    </div>
+                    <div class="vip_right">
+                        <div class="vip_td">Khách hàng thân thiết</div>
+                        <div class="vip_text">Ưu đãi dành cho khách hàng vip</div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 baohanh">
+                    <div class="baohanh_left">
+                        <img class="icon" src="./images/baohanh.png" alt="">
+                    </div>
+                    <div class="baohanh_right">
+                        <div class="baohanh_td">Hỗ trợ bảo hành</div>
+                        <div class="baohanh_text">Sữa , đổi tại cửa hàng toàn quốc</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="khoangtrang"></div>
+    <div class="mau_moi">
+        <div class="container">
+            <div class="row muc">
+                MẪU MỚI VỀ
+            </div>
+            <div class="khoangtrang"></div>
+            <div class="row row_maumoi">
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <div class="pic_maumoi maumoi_hover">
+                        <img class="style_maumoi img-change" src="./images/maumoi.jpg" alt="">
+                        <img class="style_maumoi" src="./images/maumoihv.jpg" alt="">
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp">Áo Khoác Nam Flannel Tay Dài Kẻ Caro</div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">300.000đ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 hide_maumoi">
+                    <div class="pic_maumoi maumoi_hover">
+                        <img class="style_maumoi img-change" src="./images/maumoi1.jpg" alt="">
+                        <img class="style_maumoi" src="./images/maumoi1hv.jpg" alt="">
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp">Áo Blazer Nữ Lửng Tay Ngắn Vải Tweed</div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">400.000đ</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 hide_maumoi">
+                    <div class="pic_maumoi maumoi_hover">
+                        <img class="style_maumoi img-change" src="./images/maumoi2.jpg" alt="">
+                        <img class="style_maumoi" src="./images/maumoi2hv.jpg" alt="">
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp">Áo Sweater Nam Basic Cổ Tròn Nhãn</div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">500.000đ</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <div class="pic_maumoi maumoi_hover see">
+                        <img class="style_maumoi img-change" src="./images/maumoi3.jpg" alt="">
+                        <img class="style_maumoi" src="./images/maumoi3hv.jpg" alt="">
+                        <div class="see_more">
+                            <a href="#">Xem tất cả<br> <i class="fa-solid fa-arrow-right" style="font-size: 40px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp cb">Áo Khoác Bomber Nam Nylon Chần Bông</div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">600.000đ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="khoangtrang"></div>
+    <div class="picture_info">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-ld-6 col-md-6 col-sm-6">
+                    <img class="picture_large" src="./images/b1.jpg" alt="">
+                </div>
+                <div class="col-xl-6 col-ld-6 col-md-6 col-sm-6">
+                    <div class="row small_top">
+                        <div class="col-xl-6 col-ld-6 col-md-6 col-sm-6 col-6">
+                            <img class="picture_mall_top_left" src="./images/a2.jpg" alt="">
+                        </div>
+                        <div class="col-xl-6 col-ld-6 col-md-6 col-sm-6 col-6">
+                            <img class="picture_mall_top_right" src="./images/a3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <img class="picture_mall_bot" src="./images/b4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="khoangtrang"></div>
+    </div>
+    <div class="sale">
+        <div class="container">
+            <div class="row muc">
+                SALE ĐỒNG GIÁ
+            </div>
+            <div class="khoangtrang"></div>
+            <div class="row row_sale">
+                <div class="col-xl-3 col-lg-3 col-md-3 ">
+                    <div class="pic_maumoi maumoi_hover">
+                        <img class="style_maumoi img-change" src="./images/maumoi.jpg" alt="">
+                        <img class="style_maumoi" src="./images/maumoihv.jpg" alt="">
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp">Áo Khoác Nam Flannel Tay Dài Kẻ Caro</div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">300.000đ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 ">
+                    <div class="pic_maumoi maumoi_hover">
+                        <img class="style_maumoi img-change" src="./images/maumoi1.jpg" alt="">
+                        <img class="style_maumoi" src="./images/maumoi1hv.jpg" alt="">
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp">Áo Blazer Nữ Lửng Tay Ngắn Vải Tweed</div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">400.000đ</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 hide_maumoi">
+                    <div class="pic_maumoi maumoi_hover">
+                        <img class="style_maumoi img-change" src="./images/maumoi2.jpg" alt="">
+                        <img class="style_maumoi" src="./images/maumoi2hv.jpg" alt="">
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp">Áo Sweater Nam Basic Cổ Tròn Nhãn</div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">500.000đ</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 ">
+                    <div class="pic_maumoi maumoi_hover see">
+                        <img class="style_maumoi img-change" src="./images/maumoi3.jpg" alt="">
+                        <img class="style_maumoi" src="./images/maumoi3hv.jpg" alt="">
+                        <div class="see_more">
+                            <a href="#">Xem tất cả</a>
+                            <i class="fa-solid fa-arrow-right" style="font-size: 20px;color: white;"></i>
+                        </div>
+                    </div>
+                    <div class="info_sp">
+                        <div class="row">
+                            <div class="ten_sp cb">Áo Khoác Bomber Nam Nylon Chần Bông</div>
+                        </div>
+                        <div class="row">
+                            <div class="gia_sp">600.000đ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="khoangtrang"></div>
+    <div class="thongbao">
+        <div class="container">
+            <div class="row">
+                <p id="change_thongbao">
+                    THÔNG BÁO : SIÊU SALE ĐẬM NHẤT THÁNG 4/4
+                </p>
+            </div>
+        </div>
+    </div>
+    <h1 class="fake-class">heloo</h1>
+
+
+
+
+    <script>
+        // Sử dụng jQuery để thay đổi văn bản sau 2 giây
+        $(document).ready(function () {
+            // Mảng chứa các văn bản cần thay đổi
+            var texts = ["HOT : TUẦN LỄ SIÊU SALE GIẢM 50% CHO ĐƠN HÀNG TỪ 2TR", "THÔNG BÁO : ĐẶT HÀNG NGAY ĐỂ ĐƯỢC MIỄN PHÍ SHIP"];
+            // Biến đếm vị trí hiện tại trong mảng văn bản
+            var index = 0;
+            // Hàm thay đổi văn bản
+            function changeText() {
+                $("#change_thongbao").text(texts[index]);
+                // Tăng index, hoặc reset về 0 nếu đã đến cuối mảng
+                index = (index + 1) % texts.length;
+            }
+            // Thực hiện thay đổi văn bản mỗi 2 giây
+            setInterval(changeText, 4000); // 2 giây
+        });
+        $(document).ready(function () {
+            $("#open").click(function () {
+                $(".navigation").css('display', 'block');
+                $(".navigation").animate({ left: '0px' });
+                $("#over_layout").fadeIn(500);
+            });
+        });
+        $("#close").click(function () {
+            $(".navigation").animate({ left: '-50%' }, 1000);
+            $("#over_layout").fadeOut(500);
+        });
+        $("#over_layout").click(function () {
+            $(".navigation").animate({ left: '-50%' }, 1000);
+            $("#over_layout").fadeOut(500);
+        });
+
+
+    </script>
+</body>
+
+</html>

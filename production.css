@@ -631,3 +631,8 @@ input[type="range"] {
     color: #333;
     background-color: white;
 }
+
+.hover_tim:hover,
+.hover_cart:hover {
+    color: blue;
+}

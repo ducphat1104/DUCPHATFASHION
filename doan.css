@@ -112,7 +112,14 @@
         margin-top: 13px;
         padding-left: 0px;
         cursor: pointer;
+    }
 
+    .picture_large {
+        height: 100% !important;
+    }
+
+    .small_top {
+        margin-top: 0px !important;
     }
 
 
@@ -210,7 +217,7 @@
     }
 
     .picture_large {
-        height: auto !important;
+        height: auto;
     }
 }
 
@@ -246,6 +253,11 @@
 
 }
 
+@media (max-width: 320px) {
+    .like_icon {
+        display: none !important;
+    }
+}
 
 /* HEADER */
 

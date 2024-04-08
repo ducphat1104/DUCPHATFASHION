@@ -109,6 +109,8 @@
         cursor: pointer;
 
     }
+
+
 }
 
 @media (max-width: 768px) {
@@ -200,6 +202,10 @@
 
     .small_top {
         margin-top: 20px;
+    }
+
+    .picture_large {
+        height: auto !important;
     }
 }
 

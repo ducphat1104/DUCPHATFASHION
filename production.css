@@ -397,9 +397,9 @@ input[type="range"] {
     margin-top: 15px;
 }
 
-.picture_large {
+/* .picture_large {
     height: 100%;
-}
+} */
 
 .pic_hover {
     position: relative;

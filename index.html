@@ -696,20 +696,15 @@
 
 
     <script>
-        // Sử dụng jQuery để thay đổi văn bản sau 2 giây
         $(document).ready(function () {
-            // Mảng chứa các văn bản cần thay đổi
             var texts = ["HOT : TUẦN LỄ SIÊU SALE GIẢM 50% CHO ĐƠN HÀNG TỪ 2TR", "THÔNG BÁO : ĐẶT HÀNG NGAY ĐỂ ĐƯỢC MIỄN PHÍ SHIP"];
-            // Biến đếm vị trí hiện tại trong mảng văn bản
             var index = 0;
-            // Hàm thay đổi văn bản
             function changeText() {
                 $("#change_thongbao").text(texts[index]);
-                // Tăng index, hoặc reset về 0 nếu đã đến cuối mảng
                 index = (index + 1) % texts.length;
             }
             // Thực hiện thay đổi văn bản mỗi 2 giây
-            setInterval(changeText, 4000); // 2 giây
+            setInterval(changeText, 4000);
         });
         //menu
         $(document).ready(function () {

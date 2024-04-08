@@ -1,8 +1,12 @@
 @media (max-width: 1200px) {
 
-    /* .pic_product img {
-        width: 230px;
-    } */
+    .phone {
+        display: none;
+    }
+
+    .phone_mobile {
+        display: block !important;
+    }
 }
 
 @media (min-width: 993px) {
@@ -73,10 +77,6 @@
 
     .cuahang {
         margin: 20px 0px;
-    }
-
-    .phone_mobile {
-        display: block !important;
     }
 
     .pic_blog_large,
@@ -240,6 +240,9 @@
     /* .footer .container {
         padding: 0px !important;
     } */
+    .like_icon {
+        margin-right: -15px;
+    }
 
 }
 
@@ -319,6 +322,7 @@
     padding: 10px 6px;
     border-radius: 50%;
     border: none;
+    color: black;
 }
 
 .phone {
@@ -366,8 +370,8 @@
 .user_icon a,
 .like_icon a,
 .cart_icon a {
-    text-decoration: none;
-    color: black;
+    text-decoration: none !important;
+    color: black !important;
     width: 78px;
 }
 
@@ -815,7 +819,7 @@
     position: fixed;
     right: 30px;
     bottom: 0px;
-    height: 40%;
+    height: 20%;
     z-index: 20px;
     cursor: pointer;
 }

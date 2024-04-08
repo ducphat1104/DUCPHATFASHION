@@ -683,7 +683,7 @@
 
 .pic_blog_small {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .blog_small_top {

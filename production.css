@@ -594,6 +594,7 @@ input[type="range"] {
     border: 1px solid black;
     height: 25px;
     font-weight: bold;
+    color: #333;
 }
 
 .giam_sl {

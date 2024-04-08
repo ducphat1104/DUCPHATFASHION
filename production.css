@@ -591,7 +591,7 @@ input[type="range"] {
 .tang_sl {
     background-color: white;
     width: 30px;
-    border: 1px solid;
+    border: 1px solid black;
     height: 25px;
     font-weight: bold;
 }
@@ -605,7 +605,7 @@ input[type="range"] {
 }
 
 #input_sl {
-    border: 1px solid;
+    border: 1px solid black;
     border-left: none;
     border-right: none;
     height: 25px;

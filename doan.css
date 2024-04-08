@@ -79,6 +79,11 @@
         display: block !important;
     }
 
+    .pic_blog_large,
+    .pic_blog_small {
+        height: auto !important;
+    }
+
 }
 
 @media (min-width: 768px) {

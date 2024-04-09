@@ -166,7 +166,7 @@
     }
 
     .navigation {
-        background-color: rgba(225, 225, 225, 0.2) !important;
+        background-color: rgba(225, 225, 225, 0.4) !important;
         backdrop-filter: blur(50px);
         position: fixed;
         top: 0;
@@ -193,6 +193,9 @@
     .li_danhmuc {
         width: 100%;
         box-sizing: border-box;
+        border-bottom: 1px solid transparent;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 5px;
     }
 
     .li_danhmuc:hover {
@@ -207,7 +210,7 @@
     }
 
     .list_danhmuc {
-        padding: 15px 25px !important;
+        padding: 15px 50px !important;
         display: block;
         width: 100%;
     }
@@ -254,6 +257,11 @@
     /* .picture_large {
         height: auto !important;
     } */
+    .list_danhmuc {
+        padding: 15px 30px !important;
+        display: block;
+        width: 100%;
+    }
 
 }
 
@@ -419,6 +427,11 @@
     padding: 20px;
     color: black;
     text-decoration: none;
+    text-transform: uppercase;
+}
+
+.li_danhmuc:last-child {
+    box-shadow: none;
 }
 
 .list_danhmuc:hover {
@@ -683,7 +696,8 @@
     border-radius: 5px;
     top: 0;
     left: -100%;
-    background-color: #333;
+    background: rgb(207, 207, 207);
+    background: linear-gradient(90deg, rgba(207, 207, 207, 1) 0%, rgba(154, 153, 156, 1) 100%);
     transition: all 0.3s ease-in-out;
     z-index: 9;
 }
@@ -698,7 +712,7 @@
 
 .buy:hover span {
     transition: all 0.3s ease-in-out;
-    color: white;
+    color: black;
 }
 
 .pic_blog_large {
@@ -817,23 +831,49 @@
 
 .item_right {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+}
+
+.chatbox {
+    position: fixed;
+    font-size: 25px;
+    right: -260px;
+    bottom: 40%;
+    z-index: 9;
+    width: 300px;
+    height: 50px;
+    background: rgb(0, 74, 255);
+    background: linear-gradient(90deg, rgba(0, 74, 255, 1) 0%, rgba(108, 98, 252, 1) 15%);
+    /* border: solid 1px; */
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.icon_chatbox {
+    margin-top: 13px;
+    margin-left: 12px;
+    color: white;
+}
+
+.chatbox:hover {
+    right: -240px;
 }
 
 #toTop {
     position: fixed;
     font-size: 40px;
     right: -260px;
-    bottom: 30%;
-    z-index: 20;
-    cursor: pointer;
+    bottom: 20%;
+    z-index: 9;
     width: 300px;
     height: 50px;
-    background: rgb(98, 129, 252);
-    background: linear-gradient(90deg, rgba(98, 129, 252, 1) 0%, rgba(0, 212, 255, 1) 49%);
+    background: rgb(0, 74, 255);
+    background: linear-gradient(90deg, rgba(0, 74, 255, 1) 0%, rgba(108, 98, 252, 1) 15%);
     /* border: solid 1px; */
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 #toTop:hover {
@@ -854,16 +894,16 @@
     position: fixed;
     font-size: 25px;
     right: -260px;
-    bottom: 40%;
-    z-index: 20;
-    cursor: pointer;
+    bottom: 30%;
+    z-index: 9;
     width: 300px;
     height: 50px;
-    background: rgb(98, 129, 252);
-    background: linear-gradient(90deg, rgba(98, 129, 252, 1) 0%, rgba(0, 212, 255, 1) 49%);
+    background: rgb(0, 74, 255);
+    background: linear-gradient(90deg, rgba(0, 74, 255, 1) 0%, rgba(108, 98, 252, 1) 15%);
     /* border: solid 1px; */
     border-radius: 30px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .icon_phone_mobile {

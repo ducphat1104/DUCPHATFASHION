@@ -687,12 +687,16 @@
         </div>
     </div>
     <div class="item_right">
-        <div class="phone_mobile">
+        <a href="0357253284" class="phone_mobile">
             <i class='bx bx-phone-call icon_phone_mobile'></i>
-        </div>
-        <div id="toTop">
+            <!-- bx bxs-phone -->
+        </a>
+        <a href="#" id="toTop">
             <i class='bx bx-chevron-up icon_toTop'></i>
-        </div>
+        </a>
+        <a href="#" class="chatbox">
+            <i class='bx bx-chat icon_chatbox'></i>
+        </a>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -773,13 +777,13 @@
             if ($(this).scrollTop() > 300) {
                 $('#toTop').fadeIn();
             } else {
-                $('#toTop').fadeOut();
+                $('#toTop').fadeOut("slow");
             }
         });
 
-        $("#toTop").click(function () {
-            $("html, body").animate({ scrollTop: 0 }, 1000);
-        });
+        // $("#toTop").click(function () {
+        //     $("html, body").animate({ scrollTop: 0 }, 500);
+        // });
 
         // footer
         $(document).ready(function () {

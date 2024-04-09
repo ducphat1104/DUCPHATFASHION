@@ -217,7 +217,7 @@
     }
 
     .picture_large {
-        height: auto;
+        height: auto !important;
     }
 }
 
@@ -251,9 +251,9 @@
         margin-right: -15px;
     }
 
-    .picture_large {
+    /* .picture_large {
         height: auto !important;
-    }
+    } */
 
 }
 

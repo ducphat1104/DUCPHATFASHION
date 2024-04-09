@@ -251,6 +251,10 @@
         margin-right: -15px;
     }
 
+    .picture_large {
+        height: auto !important;
+    }
+
 }
 
 @media (max-width: 320px) {

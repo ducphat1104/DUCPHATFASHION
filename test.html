@@ -9,54 +9,37 @@
 </head>
 <style>
     .row {
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 10px;
     }
 
-    .col-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding: 5px;
-        box-sizing: border-box;
-        position: relative;
-    }
-
-    .col-6 img {
+    img {
         width: 100%;
-        height: auto;
     }
 
-    .image-container {
-        height: 100%;
+    .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
     }
 
-    .image-container img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+    .item4 {
+        grid-column-start: 3;
+        grid-column-end: 5;
     }
 </style>
 
 <body>
 
-    <div class="row">
-        <div class="col-6">
-            <img src="./images/b1.png" alt="Ảnh 1">
-        </div>
-        <div class="col-6">
-            <div class="row">
-                <div class="col-6">
-                    <img src="./images/b2.jpg" alt="Ảnh 3">
-                </div>
-                <div class="col-6">
-                    <img src="./images/b.jpg" alt="Ảnh 4">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <img src="./images/b10.png" alt="Ảnh 2">
-                </div>
-            </div>
-        </div>
+
+    <div class="row"> <img class="item1" src="./images/b1.png" alt="Ảnh 1">
+
+        <img class="item2" src="./images/b2.jpg" alt="Ảnh 3">
+        <img class="item3" src="./images/b.jpg" alt="Ảnh 4">
+        <img class="item4" src="./images/b10.png" alt="Ảnh 2">
     </div>
 
 </body>

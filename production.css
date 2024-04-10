@@ -71,6 +71,7 @@
 
     .main_production_left {
         display: none;
+        overflow-y: auto;
     }
 
     .boloc {
@@ -293,7 +294,7 @@ input[type="range"] {
 }
 
 .link_production:hover {
-    color: #ffa805;
+    color: gray;
 }
 
 .main_production_left {
@@ -302,7 +303,7 @@ input[type="range"] {
 }
 
 .main_production_left button:hover {
-    background-color: #333;
+    background: linear-gradient(90deg, rgba(207, 207, 207, 1) 0%, rgba(154, 153, 156, 1) 100%);
 }
 
 .main_production_left button:hover a {

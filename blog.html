@@ -301,6 +301,37 @@
         <a href="#" class="chatbox">
             <i class='bx bx-chat icon_chatbox'></i>
         </a>
+        <div class="frame_chatbox">
+            <div class="header_chatbox">
+                <div class="text_chatbox">
+                    Chat Box
+                </div>
+                <div class="icon_close_chatbox" style="position: absolute;top:10;right:10;cursor: pointer;"><i
+                        class='bx bx-x-circle'></i></div>
+            </div>
+            <div class="body_chatbox">
+                <div class="row row_body_chatbox">
+                    <div class="col-2 left_body_chatbox">
+                        <img class="avt_chatbox" src="./images/chat-bot.png" alt="">
+                    </div>
+                    <div class="col-10 right_body_chatbox">
+                        <div class="header_right_body_chatbox">
+                            Câu hỏi thường gặp
+                        </div>
+                        <ul class="list_question_chatbox">
+                            <li class="question">Thời gian áp dụng đổi sản phẩm là bao lâu?</li>
+                            <li class="question">Hệ thống cửa hàng và thời gian mở cửa?</li>
+                            <li class="question">Sản phẩm có được bảo hành không?</li>
+                            <li class="question">Đổi hàng trực tiếp tại cửa hàng nào?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="foot_chatbox">
+                <textarea id="chat_box_message" placeholder="Enter your message"></textarea>
+                <i class='bx bxs-send icon_send'></i>
+            </div>
+        </div>
     </div>
 
 
@@ -363,6 +394,33 @@
                 console.log("cc");
                 $(".img_mota").css('display', 'none');
             });
+        });
+        $(".question").click(function () {
+            var questionText = $(this).text();
+            var answers = {
+                "Thời gian áp dụng đổi sản phẩm là bao lâu?": "Thời gian áp dụng đổi sản phẩm là 7 ngày kể từ ngày mua hàng.",
+                "Hệ thống cửa hàng và thời gian mở cửa?": "Chúng tôi có cửa hàng tại các địa chỉ sau: [Danh sách địa chỉ]. Thời gian mở cửa từ 8:00 sáng đến 9:00 tối hàng ngày.",
+                "Sản phẩm có được bảo hành không?": "Tất cả sản phẩm của chúng tôi đều được bảo hành trong vòng 12 tháng.",
+                "Đổi hàng trực tiếp tại cửa hàng nào?": "Bạn có thể đổi hàng tại bất kỳ cửa hàng nào trong hệ thống của chúng tôi."
+            };
+            var answerText = answers[questionText];
+            var newRow = $("<div class='row row_body_chatbox'></div>");
+            var col2 = $("<div class='col-2 left_body_chatbox'></div>");
+            var img = $("<img class='avt_chatbox' src='./images/chat-bot.png' alt=''></img>");
+            col2.append(img);
+            newRow.append(col2);
+            var col10 = $("<div class='col-10 right_body_chatbox'></div>");
+            var ul = $("<ul class='list_question_chatbox'></ul>");
+            var li = $("<li class='question'>" + answerText + "</li>");
+            ul.append(li);
+            col10.append(ul);
+            $(".body_chatbox").append(newRow);
+        });
+        $(".chatbox").click(function () {
+            $(".frame_chatbox").fadeIn("show");
+        });
+        $(".icon_close_chatbox").click(function () {
+            $(".frame_chatbox").fadeOut("show");
         });
         function tang() {
             var input = document.getElementById("input_sl");

@@ -52,6 +52,7 @@
     .pic_small_chitiet {
         display: flex;
         gap: 5px;
+        z-index: 1;
     }
 
     /* .picture_large {

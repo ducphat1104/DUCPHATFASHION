@@ -966,7 +966,7 @@
     border-radius: 10px;
     border: 1px solid;
     display: none;
-    z-index: 20;
+    z-index: 9;
 }
 
 .header_chatbox {
